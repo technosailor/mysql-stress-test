@@ -103,6 +103,7 @@ class AB_MySQL_Stress_Test {
 
 		$scenario2 = new WP_Query( array(
 			'post__in'              => $ids,
+			'posts_per_page'        => $this->count / 2
 		) );
 		$scenario2_time = $wpdb->timer_stop();
 		?>
